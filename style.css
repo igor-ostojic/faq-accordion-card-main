@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding-top: 6rem;
+}
+
+.card_body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: 330px;
+  border-radius: 20px;
+  padding: 11rem 1.5rem 4rem 1.5rem;
+}
+
+.card_body .mobile_image {
+  position: absolute;
+  top: -8.7rem;
+  width: 70%;
+  z-index: 2;
+}
+
+.card_body .image_pattern {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.card_body h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1d1e35;
+  margin-bottom: 1.5rem;
+}
+
+.card_body .accordion_option {
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.card_body .accordion_option .accordion_title {
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: #1d1e35;
+  font-size: 1.2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.card_body .accordion_option .accordion_title:after {
+  content: url(images/icon-arrow-down.svg);
+  position: absolute;
+  right: 0;
+}
+
+.card_body .accordion_option .accordion_title:hover {
+  cursor: pointer;
+}
+
+.card_body .accordion_option .active-accordion_title::after {
+  content: url(images/icon-arrow-down.svg);
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card_body .accordion_option .accordion_text {
+  color: #787887;
+  line-height: 1.4rem;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.card_body .accordion_option .accordion_active {
+  overflow: visible;
+  height: 55px;
+}
+/*# sourceMappingURL=style.css.map */

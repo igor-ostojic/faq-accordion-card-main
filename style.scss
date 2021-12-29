@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$Soft-red: hsl(14, 88%, 65%);
+$Soft-violet: hsl(273, 75%, 66%);
+$Soft-blue: hsl(240, 73%, 65%);
+$Very-dark-grayish-blue: hsl(237, 12%, 33%);
+$Dark-grayish-blue: hsl(240, 6%, 50%);
+$Light-grayish-blue: hsl(240, 5%, 91%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, $Soft-violet, $Soft-blue);
+  display: grid;
+  place-items: center;
+  padding-top: 6rem;
+}
+
+.card_body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 330px;
+  border-radius: 20px;
+  padding: 11rem 1.5rem 4rem 1.5rem;
+
+  .mobile_image {
+    position: absolute;
+    top: -8.7rem;
+    width: 70%;
+    z-index: 2;
+  }
+
+  .image_pattern {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $Very-dark-desaturated-blue;
+    margin-bottom: 1.5rem;
+  }
+
+  .accordion_option {
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid $Light-grayish-blue;
+
+    .accordion_title {
+      width: 100%;
+      text-align: left;
+      font-weight: 400;
+      border: none;
+      background-color: transparent;
+      color: $Very-dark-desaturated-blue;
+      font-size: 1.2rem;
+      position: relative;
+      margin-bottom: 1rem;
+
+      &:after {
+        content: url(images/icon-arrow-down.svg);
+        position: absolute;
+        right: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .active-accordion_title::after {
+        content: url(images/icon-arrow-down.svg);
+        position: absolute;
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    .accordion_text {
+      color: $Dark-grayish-blue;
+      line-height: 1.4rem;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .accordion_active {
+      overflow: visible;
+      height: 55px;
+    }
+  }
+}
