@@ -81,14 +81,19 @@ body {
 
       &:hover {
         cursor: pointer;
+        color: $Soft-red;
       }
     }
 
+    .active-accordion_title {
+      font-weight: 700;
+      color: $Very-dark-desaturated-blue;
+    }
     .active-accordion_title::after {
-        content: url(images/icon-arrow-down.svg);
-        position: absolute;
-        right: 0;
-        transform: rotate(180deg);
+      content: url(images/icon-arrow-down.svg);
+      position: absolute;
+      right: 0;
+      transform: rotate(180deg);
     }
 
     .accordion_text {

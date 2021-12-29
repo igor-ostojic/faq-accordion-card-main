@@ -85,6 +85,12 @@ body {
 
 .card_body .accordion_option .accordion_title:hover {
   cursor: pointer;
+  color: #f47c57;
+}
+
+.card_body .accordion_option .active-accordion_title {
+  font-weight: 700;
+  color: #1d1e35;
 }
 
 .card_body .accordion_option .active-accordion_title::after {
