@@ -50,6 +50,12 @@ body {
     top: 0;
   }
 
+  .right_side {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -88,6 +94,7 @@ body {
     .active-accordion_title {
       font-weight: 700;
       color: $Very-dark-desaturated-blue;
+      transition: all 0.2s ease;
     }
     .active-accordion_title::after {
       content: url(images/icon-arrow-down.svg);
@@ -101,12 +108,88 @@ body {
       line-height: 1.4rem;
       height: 0;
       overflow: hidden;
-      transition: all 0.25s ease;
+      transition: all 0.3s ease;
     }
 
     .accordion_active {
       overflow: visible;
       height: 55px;
+    }
+  }
+}
+
+.woman_desktop {
+  display: none;
+}
+
+.box {
+  display: none;
+}
+
+.pattern_desktop {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .mobile_image {
+    display: none;
+  }
+
+  .image_pattern {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .box {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+
+  .card_body {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 7.5rem;
+    overflow: hidden;
+    z-index: 3;
+
+    .left_side {
+      width: 50%;
+
+      .woman_desktop {
+        display: block;
+        max-width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 12rem;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      .pattern_desktop {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 34%;
+        left: -7%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .right_side {
+      width: 50%;
+      align-items: flex-start;
     }
   }
 }
